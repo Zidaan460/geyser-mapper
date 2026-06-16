@@ -13,13 +13,6 @@ java {
 neoForge {
     version = "26.1.2.76"
 
-    runs {
-        create("server") {
-            server()
-            systemProperty("forge.logging.console.level", "debug")
-        }
-    }
-
     mods {
         create("geysermap") {
             sourceSet(sourceSets.main.get())
@@ -32,6 +25,5 @@ repositories {
 }
 
 dependencies {
-    // Geyser API only (no full jar needed)
     compileOnly("org.geysermc.geyser:api:2.10.1-SNAPSHOT")
 }
